@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+@theme {
+  --font-display: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --font-sans: "Outfit", system-ui, sans-serif;
+
+  --color-paper: #f4efe6;
+  --color-paper-2: #e8e0d2;
+  --color-cream: #fbf7f1;
+  --color-ink: #1a2118;
+  --color-muted: #5c564c;
+  --color-faint: #6f675c;
+  --color-line: #d8d0c2;
+  --color-forest: #143528;
+  --color-forest-2: #1c4636;
+  --color-gold: #6e5324;
+  --color-gold-2: #c4a35a;
+  --color-on-forest: #f6f1e7;
+
+  --text-hero: clamp(2.75rem, 1.2rem + 6vw, 5.75rem);
+  --text-section: clamp(2.25rem, 1.4rem + 2.4vw, 3.5rem);
+
+  --tracking-brand: 0.22em;
+  --tracking-display: -0.03em;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+
+  --shadow-card:
+    0 0 0 1px rgb(26 33 24 / 0.06),
+    0 1px 2px rgb(26 33 24 / 0.04),
+    0 16px 40px rgb(26 33 24 / 0.06);
+  --shadow-card-hover:
+    0 0 0 1px rgb(26 33 24 / 0.1),
+    0 8px 24px rgb(26 33 24 / 0.08);
+
+  --ease-smooth-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    text-wrap: balance;
+    letter-spacing: var(--tracking-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  img {
+    outline: 1px solid rgb(26 33 24 / 0.1);
+    outline-offset: -1px;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-forest);
+    outline-offset: 3px;
+  }
+}
+
+@utility aspect-lounge {
+  aspect-ratio: 4 / 3;
+}
+
+@utility aspect-portrait {
+  aspect-ratio: 3 / 4;
+}
+
+.lift {
+  transition:
+    transform 250ms var(--ease-smooth-out),
+    box-shadow 250ms var(--ease-smooth-out);
+}
+
+.lift:hover {
+  transform: translateY(-2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .lift,
+  .lift:hover {
+    transition: none;
+    transform: none;
+  }
+}

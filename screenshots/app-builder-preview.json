@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "BDREAM HOME · Luxury shortlets in Igando",
+      "hasCanvas": false,
+      "bodyTextLen": 2525,
+      "bodyTextHash": "48575d138b7824a73bd89b996fde0929ebed055a69c71c4d165035e16d8f8669",
+      "bodyTextPrefix": "Skip to content BDREAM HOME Suites Gallery Amenities Location En",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "BDREAM HOME · Luxury shortlets in Igando",
+      "hasCanvas": false,
+      "bodyTextLen": 2430,
+      "bodyTextHash": "8b5d9ba4e27852430433052280bf427579ca8beac345b6e36c59a9ecccbaf4eb",
+      "bodyTextPrefix": "Skip to content BDREAM HOME Menu SERVICE APARTMENT · LAGOS More ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}
